@@ -1,0 +1,136 @@
+<html>
+        <head>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> 
+                <link  rel="stylesheet" type="text/css" href="..\complete-css.css">
+                <link  rel="stylesheet" type="text/css" href="laws.css">
+                <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+                <script src="laws.js"></script>
+        </head>
+        <body>
+                <header>
+                     <div class="header_bar"><img src="..\Images\Logo.png" alt="Logo"></div>
+                </header>
+                <nav class="topnav" id="myTopnav">
+                    <a href="../Home/home.html">Home</a>
+                    <a href="../Notice-Board/notice.html">Notice Board</a>
+                    <a href="../Event/user-event.html">Community Events</a>
+                    <a href="../Facilities/facilities.html">Facilities</a>
+                    <a href="../Payment/payment.html">Income/Expense</a>
+                    <a href="../Complaint-Box/complain.html">Complain Box</a>
+                    <a href="../Laws/laws.html">Community Laws</a>
+                </nav>
+                <div class="main-box">
+                                <div class="main-head"><img src="../Images/not.png" class="notification" id="not0" onclick="myFunction()"><img src="../Images/not-1.svg" class="notification" id="not1" onclick="myFunction()">
+                                  <span class="popuptext" id="myPopup" onclick="myFunction()">Please Read and Accept the Laws mentioned or we will have to suspend your account</span>Laws and Regulations of the Community</div>
+                                <div class="main-body">
+                    <div id="posted-events">
+                                <div id = 'div1' class = 'event-row'><button type="button" class="close" id="1" ><img class="d_img" src="../Images/download.png" ></button>There are a number of documents that dictate the rights, duties and responsibility of the members, including articles of incorporation, HOA agreements and Covenants, Conditions and Restrictions. The covenants set up the HOA organization, explain the members’ obligations, dictate what type of insurance is necessary, declare who is responsible for various expenses and other important details. The conditions state that the owner agrees to abide by the covenants. The restrictions declare what the member is or is not able to do with the property, such as what materials he or she can add. Within these documents, the member likely agrees to pay HOA fees, bond fees and other expenses as they are incurred.
+                                    
+                                    <br>HOA Fees<br>
+                                    
+                                    The main source of revenue for HOAs is HOA fees. These fees often cover such expenses as services like trash and landscaping, maintenance, insurance for common areas and other costs that the HOA incurs. HOAs calculate fees based on the projected budget for the year as well as a certain rate to go in reserve. The HOA may have a replacement reserve in which savings are put in an account to replace structural items and other items as they wear out. 
+                                    
+                                    <br>Bonds<br>
+                                    
+                                    Bonds are a type of debt that an HOA may issue. The HOA member dues may be used as collateral to secure the bond and to repay the debt. The investors who buy the bonds are the actual lenders rather than a bank or finance company. HOAs may prefer to use bonds for a number of reasons. They often offer longer repayment terms and lower interest rates than the HOA would be able to secure through bank financing. The lower interest rates and longer repayment terms help to reduce the annual cost of the loan repayment for the HOA. 
+                                    
+                                    <br>Uses of Bonds<br>
+                                    
+                                    Bonds may be used for a variety of reasons. They are often used to finance long-term capital improvements, such as making structural repairs, replacing a portion of the property, making road improvements, improving infrastructure, upgrading utilities, upgrading electrical systems and adding recreational or community facilities. 
+                                    
+                                    A speical type of bond called a fidelity bond protects HOAs if an employee embezzles and removes needed funds from the treasury, conducts computer fund, transfers funds or takes other negative action that adversely affects the HOA. This type of insurance protects the HOA’s daily and reserve funds by reimbursing the association if someone illegally takes the money. Many states do not require this type of insurance by law, but HOAs may include the need for such bonds in their governing documents. 
+                                    
+                                    <br>Special Assessments<br>
+                                    
+                                    In addition to charging HOA fees and bond fees, HOAs may also impose a special assessment on HOA members. This is an additional fee that is levied against homeowners when an unexpected expense arise, such as the need to pay for a new roof. The HOA does not have its own funds, so the owners are ultimately responsible for any expenses that come up, including current bills, capital repairs and replacement. When the original budget did not account for a necessary repair, a special assessment may be imposed without any additional warning to HOA members.
+                                    
+                                    <br>Legal Assistance<br>
+                                    
+                                    Members of an HOA who believe that they have wrongly been assessed fees may wish to contact a real estate lawyer who can review all relevant documents to explain their rights and duties. If the member did not explicitly agree to certain terms, the real estate lawyer may be able to defend him or her against the assessment or explain other legal options based on the particular circumstances involved in the case.
+                                    
+                                </div>
+                            </div></div>
+                    <div class="main-box-footer">
+                                <div class="text-center"><button id="view" class="button view_btn" data-toggle="modal" data-target="#myModal7">View who has not accepted the laws</button></div>
+                </div>
+                
+                <div class="modal fade" id="myModal5" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" onclick="clearValues()">&times;</button>
+                              <h4 class="modal-title">Download Complete</h4>
+                            </div>
+                            <div class="modal-body ">
+                                    
+                                    <div class="bottom"><div class="login_texts msg-area">
+                                        <P id="msg-area"> </P>
+                                    </div>
+                                <!-- <select class="selectpicker" multiple title="Choose one of the following...">
+                                    
+                                  </select> -->
+                                  
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-default button login_btn" data-dismiss="modal">Okay</button>
+                                    <!-- <button type="button" class="btn btn-default button login_btn" id="no1" data-dismiss="No">Cancel</button> -->
+                                  </div>
+                          </div>
+                        </div>
+                      </div>
+                </div> 
+                </div>
+
+                <div class="modal fade" id="myModal7" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" onclick="clearValues()">&times;</button>
+                              <h4 class="modal-title">List of People who have not Accepted the Laws</h4>
+                            </div>
+                            <div class="modal-body ">
+                                    
+                                    <div class="bottom"><div class="login_texts msg-area">
+                                        <P id="msg-area">Mr. Joey Tribianni</P>
+                                        <P id="msg-area">Mr. Chandler Bing</P>
+                                        <P id="msg-area">Miss Monica Geller</P>
+                                    </div>
+                                <!-- <select class="selectpicker" multiple title="Choose one of the following...">
+                                    
+                                  </select> -->
+                                  
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-default button remind_btn" data-dismiss="modal">Send Reminders</button>
+                                    <!-- <button type="button" class="btn btn-default button login_btn" id="no1" data-dismiss="No">Cancel</button> -->
+                                  </div>
+                          </div>
+                        </div>
+                      </div>
+                </div> 
+                </div>
+                <div class="modal fade" id="myModal6" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" onclick="clearValues()">&times;</button>
+                              <h4 class="modal-title">Reminders Sent!</h4>
+                            </div>
+                            <div class="modal-body ">
+    
+                                <!-- <select class="selectpicker" multiple title="Choose one of the following...">
+                                    
+                                  </select> -->
+                                  
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-default button login_btn" data-dismiss="modal">Okay</button>
+                                    <!-- <button type="button" class="btn btn-default button login_btn" id="no1" data-dismiss="No">Cancel</button> -->
+                                  </div>
+                          </div>
+                        </div>
+                      </div>
+        </div> 
+        </div>
+                <!-- <footer></footer> -->
+        </body>
+        <img src="../Images/spin.gif" id="loader" class="loader">
+    </html>

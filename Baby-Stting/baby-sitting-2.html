@@ -1,0 +1,87 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> 
+            <link  rel="stylesheet" type="text/css" href="..\complete-css.css">
+            <link  rel="stylesheet" type="text/css" href="baby-sitting.css">
+            <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+            <script src="baby-sitting-2.js"></script>
+    </head>
+    <body>
+            <header>
+                 <div class="header_bar"><img src="..\Images\Logo.png" alt="Logo"></div>
+            </header>
+            <nav class="topnav" id="myTopnav">
+                <a href="../Home/home.html">Home</a>
+                <a href="../Notice-Board/notice.html">Notice Board</a>
+                <a href="../Event/user-event.html">Community Events</a>
+                <a href="../Facilities/facilities.html">Facilities</a>
+                <a href="../Payment/payment.html">Income/Expense</a>
+                <a href="../Complaint-Box/complain.html">Complain Box</a>
+                <a href="../Laws/laws.html">Community Laws</a>
+            </nav>
+            <div class="main-box">
+                            <div class="main-head"><img src="../Images/not.png" class="notification" id="not0" onclick="myFunction()"><img src="../Images/not-1.svg" class="notification" id="not1" onclick="myFunction()">
+                              <span class="popuptext" id="myPopup" onclick="myFunction()"></span>Finding Baby sitters is so easy!</div>
+                            <div class="main-body">
+                <div id="posted-events">
+                    <div id = 'div1' class = 'event-row'><button type="button" class="close" id="1" onclick="deletePost(this.id)">&times;</button>Hello I am Cathy. I need someone to babysit my 8 year old child on 12-27-2017 from 7:00PM to 9:00PM.<br> I am willing to pay 20 dollars per hour.<br>
+                        Interested People, Please <a data-toggle='modal' data-target='#myModal2' href="#">Click Here</a><img src='../Images/baby.png' class='car'>
+        </div>
+                        </div></div>
+                <div class="main-box-footer">
+                            <div class="text-center"><button id="login_buttn" class="button" data-toggle="modal" data-target="#myModal">Ask your Neighbours If they wanna join you!</button></div>
+            </div>
+            
+            <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" onclick="clearValues()">&times;</button>
+                          <h4 class="modal-title">Please Enter the details of your trip!</h4>
+                        </div>
+                        <div class="modal-body">
+                                <p class="error" id="error-msg"></p>
+                                <div class="main-footer">
+                                            <!-- <div class="col-sm-8 float-left"><input type="textbox" value="" id="event-des" placeholder="Describe the event here!" class="event-description"></div> -->
+                                            <div class="col-sm-6 float-left"><label><div class="login_texts">Your Name:</div><input type="text" required id="name" onkeyup="checkNull()" class="details" placeholder="Name"></label></div>
+                                            <div class="col-sm-6 float-left"><label><div class="login_texts">Contact Number:</div><input type="text" required id="contact" onkeyup="checkNull()" class="details" placeholder="(669)-204-4947"></label></div>
+                                            <div class="col-sm-6 float-left"><label><div class="login_texts">Pick up Point:</div><input type="text" required id="pickup" onkeyup="checkNull()" class="details" placeholder="Santa Clara University"></label></div>
+                                            <div class="col-sm-6 float-left"><label><div class="login_texts">Drop off Point:</div><input type="text" required id="dropoff" onkeyup="checkNull()" class="details" placeholder="San Francisco"></label></div>
+                                            <div class="col-sm-6 float-left"><label><div class="login_texts">Departure Time:</div><input type="text" required id="time" onkeyup="checkNull()" class="details" placeholder="9:00AM"></label></div>
+                                            <div class="col-sm-6 float-left"><label><div class="login_texts">Departure Date:</div><input type="text" required id="date" onkeyup="checkNull()" class="details" placeholder="12-07-2017"></label></div>
+                                            <div class="col-sm-6 float-left"><label><div class="login_texts">Available Seats:</div><input type="text" required id="seats" onkeyup="checkNull()" class="details" placeholder="Seats"></label></div>
+                                            <div class="col-sm-6 float-left"><label><div class="login_texts">Fare per Person:</div><input type="text" required id="fare" onkeyup="checkNull()" class="details" placeholder="Fare"></label></div>
+                                            <!-- <div class="col-sm-4 float-right">
+                                                    <input type="checkbox" value="volunteers"><span class="text-orange">Request Volunteers</span>
+                                                <button type="button" id="post-event" class="button">Post!</button></div> -->
+                                            </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default button login_btn btn" id="login_buttn2" data-dismiss="modal" disabled>Post</button>
+                              </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="myModal2" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" onclick="clearValues()">&times;</button>
+                                  <h4 class="modal-title">Please Confirm!</h4>
+                                </div>
+                                <div class="modal-body ">
+                                    <div class="col-sm-6 float-left bottom"><label><div class="login_texts">Your Name:</div><input type="text" required id="name2" onkeyup="checkNull()" class="details" placeholder="Name"></label></div>
+                                    <div class="col-sm-6 float-left bottom"><label><div class="login_texts">Contact Number:</div><input type="text" required id="contact2" onkeyup="checkNull()" class="details" placeholder="(669)-204-4947"></label></div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-default button login_btn btn" id="yes1" data-dismiss="modal" disabled>Confirm</button>
+                                        <button type="button" class="btn btn-default button login_btn" id="no1" data-dismiss="modal">Cancel</button>
+                                      </div>
+                              </div>
+                            </div>
+                          </div>
+            </div> 
+            <!-- <footer></footer> -->
+    </body>
+    <img src="../Images/spin.gif" id="loader" class="loader">
+</html>

@@ -1,0 +1,97 @@
+p{
+    font-family: cursive;
+    margin: auto;
+}
+a{
+    color: rgb(234, 114,0);
+    font-family: cursive;
+}
+label{
+    font-family: cursive;
+}
+div{
+    font-family: cursive;
+}
+body{
+    background-image: url("Images/form-back.jpg");
+}
+.button{
+    width: 75%;
+    padding: 10px 20px 10px 20px;
+    background-color: rgb(234,114,0);
+    border-radius: 20px;
+    color: white;
+    font-size: 25px;
+    font-family: cursive;
+    text-align: center;
+    box-shadow: 5px 5px 5px #888888;
+    margin: 10px 0 10px 0;
+}
+.header_bar{
+    height: 100px;
+    text-align: center;
+    background-color: rgb(234, 114,0);
+}
+footer{
+    height: 50px;
+    background-color: rgb(234, 114,0);
+    margin-top: 50px;
+}
+.modal-title{
+    margin: auto;
+    color: rgb(234, 114,0);
+    font-family: cursive;
+}
+.text-orange{
+    color: rgb(234, 114,0);
+    font-family: cursive;
+}
+nav{
+    margin-top: 65px;
+    height: 20px;
+    background-color: rgb(234, 114,0);
+    color: white;
+    font-family: cursive;
+    padding-bottom: 30px;
+    text-align: center;
+}
+nav a{
+    color: white;
+    margin: 0px 2% 0px 2%;
+}
+.tab-container{
+    width: 1010px;
+}
+.tab{
+    color: rgb(234, 114,0);
+    font-family: cursive;
+    width: 295px;
+    height: 300px;
+    border: 2px solid rgb(234, 114,0);
+    display: inline-block;
+    float: left;
+    margin-right: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+.tab:hover
+{
+    box-shadow: 0px 0px 50px #000000;
+    z-index: 10;
+    -webkit-transition: all 500ms ease-in;
+    -webkit-transform: scale(1);
+    -ms-transition: all 500ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 500ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 500ms ease-in;
+    transform: scale(1);
+    cursor: pointer
+}
+.tab p{
+   margin-top: 20px;
+}
+.tab img {
+    width: 100px;
+    margin-top: 100px;
+}

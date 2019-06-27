@@ -1,0 +1,148 @@
+<html>
+        <head>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> 
+                <link  rel="stylesheet" type="text/css" href="..\complete-css.css">
+                <link  rel="stylesheet" type="text/css" href="payment.css">
+                <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+                <script src="payment.js"></script>
+        </head>
+        <body>
+                <header>
+                     <div class="header_bar"><img src="..\Images\Logo.png" alt="Logo"></div>
+                </header>
+                <nav class="topnav" id="myTopnav">
+                        <a href="../Home/home.html">Home</a>
+                        <a href="../Notice-Board/notice.html">Notice Board</a>
+                        <a href="../Event/user-event.html">Community Events</a>
+                        <a href="../Facilities/facilities.html">Facilities</a>
+                        <a href="../Payment/payment.html">Income/Expense</a>
+                        <a href="../Complaint-Box/complain.html">Complain Box</a>
+                        <a href="../Laws/laws.html">Community Laws</a>
+                </nav>
+                <div class="main-box">
+                                <div class="main-head"><img src="../Images/not.png" class="notification" id="not0" onclick="myFunction()"><img src="../Images/not-1.svg" class="notification" id="not1" onclick="myFunction()">
+                                  <span class="popuptext" id="myPopup" onclick="myFunction()">Your payment for 500 dollars is recieved</span>Community Payments and Expenses</div>
+                                <div class="main-body">
+                    <div id="posted-events">
+                                <div id = 'div1' class = 'event-row'><button type="button" class="close" id="1"></button>
+                                    Hello, your Monthly maintenance payment of 500 Dollars is due on 12-01-17.
+                                     <br>Please make the payment as soon as possible.<br>
+                                     <br>Late Fees of 50 Dollars will be added in case, payment is not done on time.
+                                    <div class="text-center"><button id="login_buttn" class="button" data-toggle="modal" data-target="#myModal">Make Payment</button></div>
+                                    
+                                    
+                                    
+                                </div>
+                                <div id = 'div2' class = 'event-row'><button type="button" class="close" id="2" onclick="deletePost(this.id)">&times;</button>
+                                    A Boardmember recorded an expense of 100 Dollars for Gym Equipments.                                   
+                                </div>
+                            </div></div>
+                    <div class="main-box-footer">
+                                <!-- <div class="text-center"><button id="login_buttn" class="button" data-toggle="modal" data-target="#myModal">I Accept</button></div> -->
+                </div>
+
+                <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" onclick="clearValues()">&times;</button>
+                              <h4 class="modal-title">Please Enter the following details</h4>
+                            </div>
+                            <div class="modal-body ">
+                                    
+                                    <div class="creditCardForm">
+                                            <!-- <div class="heading">
+                                                <h1>Confirm Purchase</h1>
+                                            </div> -->
+                                            <div class="payment">
+                                                <form>
+                                                    <div class="form-group owner">
+                                                        <label for="owner">Owner</label>
+                                                        <input type="text" class="form-control" id="owner" onkeyup="checkNull()">
+                                                    </div>
+                                                    <div class="form-group CVV">
+                                                        <label for="cvv">CVV</label>
+                                                        <input type="text" class="form-control" id="cvv" onkeyup="checkNull()">
+                                                    </div>
+                                                    <div class="form-group" id="card-number-field">
+                                                        <label for="cardNumber">Card Number</label>
+                                                        <input type="text" class="form-control" id="cardNumber" onkeyup="checkNull()">
+                                                    </div>
+                                                    <div class="form-group" id="expiration-date">
+                                                        <label>Expiration Date</label>
+                                                        <select>
+                                                            <option value="01">January</option>
+                                                            <option value="02">February </option>
+                                                            <option value="03">March</option>
+                                                            <option value="04">April</option>
+                                                            <option value="05">May</option>
+                                                            <option value="06">June</option>
+                                                            <option value="07">July</option>
+                                                            <option value="08">August</option>
+                                                            <option value="09">September</option>
+                                                            <option value="10">October</option>
+                                                            <option value="11">November</option>
+                                                            <option value="12">December</option>
+                                                        </select>
+                                                        <select>
+                                                            <option value="16"> 2016</option>
+                                                            <option value="17"> 2017</option>
+                                                            <option value="18"> 2018</option>
+                                                            <option value="19"> 2019</option>
+                                                            <option value="20"> 2020</option>
+                                                            <option value="21"> 2021</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group" id="credit_cards">
+                                                        <img src="../Images/visa.png" id="visa">
+                                                        <!-- <img src="assets/images/mastercard.jpg" id="mastercard">
+                                                        <img src="assets/images/amex.jpg" id="amex"> -->
+                                                    </div>
+                                                    <!-- <div class="form-group" id="pay-now">
+                                                        <button type="submit" class="btn btn-default" id="confirm-purchase">Confirm</button>
+                                                    </div> -->
+                                                </form>
+                                            </div>
+                                        </div>
+                                <!-- <select class="selectpicker" multiple title="Choose one of the following...">
+                                    
+                                  </select> -->
+                                  
+                                  <div class="modal-footer">
+                                        <div class="form-group" id="pay-now">
+                                    <button type="submit" class="btn btn-default button login_btn" data-dismiss="modal" id="confirm-purchase" disabled>Confirm</button>
+                                    <!-- <button type="button" class="btn btn-default button login_btn" id="no1" data-dismiss="No">Cancel</button> -->
+                                    </div>
+                                  </div>
+                          </div>
+                        </div>
+                      </div>
+                </div> 
+                <div class="modal fade" id="myModal6" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" onclick="clearValues()">&times;</button>
+                              <h4 class="modal-title">Payment Complete!</h4>
+                            </div>
+                            <div class="modal-body ">
+    
+                                <!-- <select class="selectpicker" multiple title="Choose one of the following...">
+                                    
+                                  </select> -->
+                                  
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-default button login_btn" data-dismiss="modal" onclick="deletePost(1)">Okay</button>
+                                    <!-- <button type="button" class="btn btn-default button login_btn" id="no1" data-dismiss="No">Cancel</button> -->
+                                  </div>
+                          </div>
+                        </div>
+                      </div>
+        </div> 
+                </div>
+
+                <!-- <footer></footer> -->
+        </body>
+        <img src="../Images/spin.gif" id="loader" class="loader">
+    </html>

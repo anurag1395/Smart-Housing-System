@@ -1,0 +1,140 @@
+<html>
+        <head>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> 
+                <link  rel="stylesheet" type="text/css" href="..\complete-css.css">
+                <link  rel="stylesheet" type="text/css" href="complain.css">
+                <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+                <script src="complain-admin.js"></script>
+        </head>
+        <body>
+                <header>
+                     <div class="header_bar"><img src="..\Images\Logo.png" alt="Logo"></div>
+                </header>
+                <nav class="topnav" id="myTopnav">
+                    <a href="../Home/home.html">Home</a>
+                    <a href="../Notice-Board/notice.html">Notice Board</a>
+                    <a href="../Event/user-event.html">Community Events</a>
+                    <a href="../Facilities/facilities.html">Facilities</a>
+                    <a href="../Payment/payment.html">Income/Expense</a>
+                    <a href="../Complaint-Box/complain.html">Complain Box</a>
+                    <a href="../Laws/laws.html">Community Laws</a>
+                </nav>
+                <div class="main-box">
+                                <div class="main-head">Community Complain Box</div>
+                                <div class="main-body">
+                    <div id="posted-events">
+                            <div id ='1' class = 'event-row'><button type="button" class="close" id="1" onclick="deletePost(this.id)">&times;</button>Date: 11-27-17<br>Complain By Block No: 245<br>Complain about a Neighbour:<br> The neighbours living in the Block 221 are very noisy in the Quiet Hours of the community<br><a href="#" onclick="deletePost(this.id)" id="m1">Mark as taken care of</a><a href="#" class = "float-right" data-toggle="modal" data-target="#myModal4" onclick="getmsg()">View Feedback</a></div>
+                            <div id ='2' class = 'event-row'><button type="button" class="close" id="2" onclick="deletePost(this.id)">&times;</button>Date: 11-25-17<br>Complain By Block No: 25<br>Complain about Common Utilities: <br> The swimming Pool needs cleaning<br><a href="#" onclick="deletePost(this.id)" id="m2">Mark as taken care of</a><a href="#" class = "float-right" data-toggle="modal" data-target="#myModal4" onclick="getmsg()">View Feedback</a></div>    
+                        </div></div>
+                    <div class="main-box-footer">
+                                <div class="text-center"><button id="login_buttn" class="button" data-toggle="modal" data-target="#myModal2">Filter the complain box</button></div>
+                </div>
+                      <div class="modal fade" id="myModal2" role="dialog">
+                                <div class="modal-dialog modal-sm">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal" onclick="clearValues()">&times;</button>
+                                      <h4 class="modal-title">Please Provide the following details!</h4>
+                                    </div>
+                                    <div class="modal-body ">
+                                            <div class="bottom"><div class="login_texts">Type of complain</div>
+                                            <select class="form-control form-control-md" id="about">
+                                                    <option class="orange" onClick="complain(this.id)" id="Neighbour" value="Neighbour">About a Neighbor</option>
+                                                    <option class="orange" onClick="complain(this.id)"  id="Common Utilities" value="Common Utilities">About Common Utilities</option>
+                                                    <option class="orange" onClick="complain(this.id)"  id="Board Member" value="Board Member">About a Board Member</option>
+                                                    <option class="orange"  onClick="complain(this.id)"  id="other">Other</option>
+                                                  </select></div>
+                                                  <div class="bottom"><div class="login_texts">Status of complain</div>
+                                                  <select class="form-control form-control-md" id="about">
+                                                          <option class="orange" onClick="complain(this.id)" id="Neighbour" value="Neighbour">In progress</option>
+                                                          <option class="orange" onClick="complain(this.id)"  id="Common Utilities" value="Common Utilities">Resolved</option>
+                                                        </select></div>
+    
+                                        <!-- <select class="selectpicker" multiple title="Choose one of the following...">
+                                            
+                                          </select> -->
+                                          
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-default button login_btn" id="yes1" data-dismiss="modal">Filter</button>
+                                            <!-- <button type="button" class="btn btn-default button login_btn" id="no1" data-dismiss="No">Cancel</button> -->
+                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                </div>
+                <div class="modal fade" id="myModal3" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" onclick="clearValues()">&times;</button>
+                              <h4 class="modal-title">Your complain is duly noted!</h4>
+                            </div>
+                            <div class="modal-body ">
+                                    <div class="bottom"><div class="login_texts">We assure you, we will take care of it</div>
+    
+                                <!-- <select class="selectpicker" multiple title="Choose one of the following...">
+                                    
+                                  </select> -->
+                                  
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-default button login_btn" data-dismiss="modal">Okay</button>
+                                    <!-- <button type="button" class="btn btn-default button login_btn" id="no1" data-dismiss="No">Cancel</button> -->
+                                  </div>
+                          </div>
+                        </div>
+                      </div>
+        </div> 
+        </div>
+        <div class="modal fade" id="myModal4" role="dialog">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" onclick="clearValues()">&times;</button>
+                      <h4 class="modal-title">Feedback</h4>
+                    </div>
+                    <div class="modal-body ">
+                            <div class="bottom"><div class="login_texts msg-area">
+                                    <P id="msg-area"> </P>
+                                </div>
+    
+                        <!-- <select class="selectpicker" multiple title="Choose one of the following...">
+                            
+                          </select> -->
+                          
+                          <div class="modal-footer">
+                            <!-- <button type="button" class="btn btn-default button login_btn" id="no1" data-dismiss="No">Cancel</button> -->
+                          </div>
+                  </div>
+                </div>
+              </div>
+    </div> 
+    <div class="modal fade" id="myModal5" role="dialog">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" onclick="clearValues()">&times;</button>
+                  <h4 class="modal-title">View the status of your complain</h4>
+                </div>
+                <div class="modal-body ">
+                        
+                        <div class="bottom"><div class="login_texts msg-area">
+                            <P id="msg-area"> </P>
+                        </div>
+                    <!-- <select class="selectpicker" multiple title="Choose one of the following...">
+                        
+                      </select> -->
+                      
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default button login_btn" data-dismiss="modal">Okay</button>
+                        <!-- <button type="button" class="btn btn-default button login_btn" id="no1" data-dismiss="No">Cancel</button> -->
+                      </div>
+              </div>
+            </div>
+          </div>
+    </div> 
+    </div>
+                <!-- <footer></footer> -->
+        </body>
+        <img src="../Images/spin.gif" id="loader" class="loader">
+    </html>

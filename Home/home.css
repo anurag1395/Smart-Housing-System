@@ -1,0 +1,16 @@
+.tab-container{
+    position: relative;
+    top: 100px;
+    left: 11%;
+}
+#tab2 img{
+    width: 118px;
+}
+#tab1 p{
+    margin-top: 28px;
+}
+#loader{
+    position: relative;
+    left: 50%;
+    top: -250px;
+}

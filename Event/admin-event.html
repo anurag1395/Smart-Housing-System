@@ -1,0 +1,63 @@
+<html>
+    
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+            crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="..\complete-css.css">
+        <link rel="stylesheet" type="text/css" href="admin-event.css">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+        <script src="admin-event.js"></script>
+    </head>
+
+<body>
+        <header>
+                <div class="header_bar">
+                    <img src="..\Images\Logo.png" alt="Logo">
+                </div>
+            </header>
+            <nav class="topnav" id="myTopnav">
+                    <a href="../Home/home.html">Home</a>
+                    <a href="../Notice-Board/notice.html">Notice Board</a>
+                    <a href="../Event/user-event.html">Community Events</a>
+                    <a href="../Facilities/facilities.html">Facilities</a>
+                    <a href="../Payment/payment.html">Income/Expense</a>
+                    <a href="../Complaint-Box/complain.html">Complain Box</a>
+                    <a href="../Laws/laws.html">Community Laws</a>
+    </nav>
+            <div class="main-box">
+                <div class="main-head"><img src="../Images/not.png" class="notification" id="not0" onclick="myFunction()"><img src="../Images/not-1.svg" class="notification" id="not1" onclick="myFunction()">
+                    <span class="popuptext" id="myPopup" onclick="myFunction()"></span>Events are soooo much Fun! Post a new Event Here..</div>
+                <div class="main-body">
+    <div id="posted-events"></div></div>
+    <div class="main-footer">
+<div class="col-sm-8 float-left"><input type="textbox" value="" id="event-des" placeholder="Describe the event here!" class="event-description"></div>
+<div class="col-sm-4 float-right">
+        <input type="checkbox" value="volunteers"><span class="text-orange">Request Volunteers</span>
+    <button type="button" id="post-event" class="button">Post!</button></div>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" onclick="clearValues()">&times;</button>
+              <h4 class="modal-title">Please Enter the details of the meeting!</h4>
+            </div>
+            <div class="modal-body">
+                    <p class="error" id="error-msg"></p>
+                      <div><label><div class="login_texts">Place:</div><input type="text" required id="userName" onkeyup="Checknull()"></label></div>
+                      <div><label><div class="login_texts">Time:</div><input type="password" required id="Password" onkeyup="Checknull()"></label></div>
+                      <div><label><div class="login_texts">Purpose:</div><input type="password" required id="Password" onkeyup="Checknull()"></label></div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default button login_btn" id="login_buttn2" disabled>Send Meeting Request</button>
+                  </div>
+          </div>
+        </div>
+      </div>
+</div>  
+</body>
+<img src="../Images/spin.gif" id="loader" class="loader">
+</html>

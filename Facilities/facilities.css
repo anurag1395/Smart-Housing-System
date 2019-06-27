@@ -1,0 +1,18 @@
+.tab-container{
+    position: relative;
+    top: 300px;
+    left: 11%;
+    height: 500px
+}
+#tab1 img{
+    margin-top: 140px;
+    width: 120px;
+}
+#tab1 p{
+    margin-top: 28px;
+}
+#loader{
+    position: relative;
+    left: 50%;
+    top: -250px;
+}

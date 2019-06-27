@@ -1,0 +1,68 @@
+<html>
+        <head>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> 
+                <link  rel="stylesheet" type="text/css" href="..\complete-css.css">
+                <link  rel="stylesheet" type="text/css" href="medical.css">
+                <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+                <script src="medical-admin.js"></script>
+        </head>
+        <body>
+                <header>
+                     <div class="header_bar"><img src="..\Images\Logo.png" alt="Logo"></div>
+                </header>
+                <nav class="topnav" id="myTopnav">
+                    <a href="../Home/home.html">Home</a>
+                    <a href="../Notice-Board/notice.html">Notice Board</a>
+                    <a href="../Event/user-event.html">Community Events</a>
+                    <a href="../Facilities/facilities.html">Facilities</a>
+                    <a href="../Payment/payment.html">Income/Expense</a>
+                    <a href="../Complaint-Box/complain.html">Complain Box</a>
+                    <a href="../Laws/laws.html">Community Laws</a>
+                </nav>
+                <div class="main-box">
+                                <div class="main-head">Please find below the places you have added to provide Medical Help</div>
+                                <div class="main-body">
+                    <div id="posted-events">
+                            <div id ='1' class = 'event-row'><button type="button" class="close" id="1" onclick="deletePost(this.id)">&times;</button>Name of the Doctor: Dr. Drake Ramoray <br> Speciality: Pediatrician <br> Address: 2147 Newhall Street Santa Clara CA 95050 <br> Timing: 9:00AM - 4:00PM <br> Contact: 950507789</div>
+                            <div id ='2' class = 'event-row'><button type="button" class="close" id="2" onclick="deletePost(this.id)">&times;</button>Name of the Doctor: Dr. Annie Gates <br> Speciality: Pediatrician <br> Address: 2149 California Street Santa Clara CA 95050 <br> Timing: 8:00AM - 8:00PM <br> Contact: 6692044921</div>    
+                            <div id ='3' class = 'event-row'><button type="button" class="close" id="3" onclick="deletePost(this.id)">&times;</button>Name of the Doctor: Dr. Joseph Geller <br> Speciality: Pediatrician <br> Address: 2146 Washington Street Santa Clara CA 95050 <br> Timing: 9:00AM - 12:00PM <br> Contact: 512522140</div>
+                            <div id ='4' class = 'event-row'><button type="button" class="close" id="4" onclick="deletePost(this.id)">&times;</button>Name of the Doctor: Dr. Richard Brman <br> Speciality: Pediatrician <br> Address: 2138 Sacramento Street Santa Clara CA 95050 <br> Timing: 11:00AM - 2:00PM <br> Contact: 989507789"</div> 
+                        </div></div>
+                    <div class="main-box-footer">
+                                <div class="text-center"><button id="login_buttn" class="button" data-toggle="modal" data-target="#myModal2">Add a new Doctor</button></div>
+                </div>
+                      <div class="modal fade" id="myModal2" role="dialog">
+                                <div class="modal-dialog modal-sm">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal" onclick="clearValues()">&times;</button>
+                                      <h4 class="modal-title">Please Provide the following details!</h4>
+                                    </div>
+                                    <div class="modal-body ">
+                                            <div class="col-sm-6 float-left bottom"><label><div class="login_texts">Name of the Doctor:</div><input type="text" required id="name2" onkeyup="Checknull()" class="details" placeholder="Name"></label></div>
+                                            <div class="col-sm-6 float-left bottom"><label><div class="login_texts">Address:</div><input type="text" required id="add2" onkeyup="Checknull()" class="details" placeholder="Address"></label></div>
+                                            <div class="col-sm-6 float-left bottom"><label><div class="login_texts">Available From:</div><input type="text" required id="afrom" onkeyup="Checknull()" class="details" placeholder="9:00AM"></label></div>
+                                            <div class="col-sm-6 float-left bottom"><label><div class="login_texts">Available To:</div><input type="text" required id="ato" onkeyup="Checknull()" class="details" placeholder="12:00PM"></label></div>
+                                            <div class="col-sm-6 float-left bottom"><label><div class="login_texts">Contact Number:</div><input type="text" required id="contact2" onkeyup="Checknull()" class="details" placeholder="(669)-204-4947"></label></div>
+                                            <select class="form-control form-control-lg">
+                                                    <option class="orange" onmouseover="back_orange(this.id)" id="o1">Chiropractor</option>
+                                                    <option class="orange" onmouseover="back_orange(this.id)" id="o2">Orthopedic</option>
+                                                    <option class="orange" onmouseover="back_orange(this.id)" id="o3">Pediatrician</option>
+                                                  </select>
+                                        <!-- <select class="selectpicker" multiple title="Choose one of the following...">
+                                            
+                                          </select> -->
+                                          
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-default button login_btn" id="yes1" data-dismiss="modal">Add</button>
+                                            <!-- <button type="button" class="btn btn-default button login_btn" id="no1" data-dismiss="No">Cancel</button> -->
+                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                </div> 
+                <!-- <footer></footer> -->
+        </body>
+        <img src="../Images/spin.gif" id="loader" class="loader">
+    </html>

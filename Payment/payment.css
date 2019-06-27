@@ -1,0 +1,470 @@
+.main-box{
+    width: 50%;
+    position: relative;
+    top: 215px;
+    left: 27%;
+    background-color: white;
+    border: 2px solid rgb(234, 114,0);
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px #888888;
+    margin-bottom: 100px;
+}
+.main-head{
+    margin: auto;
+    background-color: rgb(234, 114,0);
+    color: white;
+    font-family: cursive;
+    padding: 10px;
+    text-align: center;
+}
+.main-body{
+    padding: 30px 10px 30px 10px;
+    overflow-y: scroll;
+    min-height: 200px;
+    height: 500px;
+}
+.main-footer{
+    border-top: 2px solid rgb(234, 114,0);
+    padding: 30px 10px 30px 10px;
+    overflow-y: auto;
+    text-align: center;
+}
+.event-description{
+    width: 90%;
+    height: 15%;
+    overflow: scroll;
+}
+input[type=checkbox]{
+    margin: 10px;
+}
+.del-btn{
+    width: 11%;
+    height: 10%;
+    float: right;
+    margin-right: 15px;
+    font-size: 15px;
+    padding: 0px;
+}
+.login_texts{
+    text-align: left;
+    margin-bottom: 8px;
+}
+.details{
+    width: 130%;
+}
+.modal-content{
+    width: 700px;
+    left: -55%;
+}
+.modal-footer{
+-webkit-justify-content : normal;
+justify-content: normal;
+margin: auto;
+padding-left: 180px;
+margin-left: 12%;
+}  
+.login_btn{
+    width: 130px;
+}
+.event-row{
+    padding: 15px 0px 15px 15px;
+    border: 2px solid rgb(234, 114,0);
+}
+.car{
+    width: 26px;
+    height: 25px;
+    margin-left: 5px;
+}
+.main-box-footer{
+    padding: 20px 0px;
+    border-top: 2px solid rgb(234, 114,0);
+}
+.notification{
+    width: 25px;
+    margin-left: -5%;
+    margin-right: 7%;
+    position: relative;
+    left: -130px;
+}
+/* Popup container*/
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popuptext {
+    /* visibility: hidden; */
+    width: 430px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 83%;
+    left: -14%;
+    margin-left: -80px;
+    padding: 10px;
+}
+
+/* Popup arrow */
+.popuptext::after {
+    content: "";
+    position: absolute;
+    top: -13%;
+    left: 50%;
+    margin-left: -5px;
+    /* border-width: 5px; */
+    /* border-style: solid; */
+    border-color: #555 transparent transparent transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #555;
+}
+
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.show {
+    visibility: visible;
+    /* display: block; */
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+ @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+.modal-footer>:not(:last-child) {
+    margin-right: 51px;
+}
+.bottom{
+    padding-bottom: 20px;
+}
+.d_img{
+    width: 67px;
+    position: relative;
+    top: -53px;
+}
+#loader{
+    position: relative;
+    top: -417px;
+    left: 700px;
+}
+.button{
+    width: 37%;
+}
+.view_btn{
+    width: 70%;
+}
+.remind_btn{
+    width: 70%;
+}
+#myModal7 .modal-footer{
+    padding-left: 60px;
+}
+
+.creditCardForm {
+    max-width: 700px;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 25px;
+    color: #4c4e56;
+}
+.creditCardForm label {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.creditCardForm .heading h1 {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #4c4e56;
+}
+.creditCardForm .payment {
+    float: left;
+    font-size: 18px;
+    padding: 10px 25px;
+    margin-top: 20px;
+    position: relative;
+}
+.creditCardForm .payment .form-group {
+    float: left;
+    margin-bottom: 15px;
+}
+.creditCardForm .payment .form-control {
+    line-height: 40px;
+    height: auto;
+    padding: 0 16px;
+}
+.creditCardForm .owner {
+    width: 63%;
+    margin-right: 10px;
+}
+.creditCardForm .CVV {
+    width: 35%;
+}
+.creditCardForm #card-number-field {
+    width: 100%;
+}
+.creditCardForm #expiration-date {
+    width: 49%;
+}
+.creditCardForm #credit_cards {
+    width: 50%;
+    margin-top: 25px;
+    text-align: right;
+}
+.creditCardForm #pay-now {
+    width: 100%;
+    margin-top: 25px;
+}
+.creditCardForm .payment .btn {
+    width: 100%;
+    margin-top: 3px;
+    font-size: 24px;
+    background-color: #2ec4a5;
+    color: white;
+}
+.creditCardForm .payment select {
+    padding: 10px;
+    margin-right: 15px;
+}
+.transparent {
+    opacity: 0.2;
+}
+@media(max-width: 650px) {
+    .creditCardForm .owner,
+    .creditCardForm .CVV,
+    .creditCardForm #expiration-date,
+    .creditCardForm #credit_cards {
+        width: 100%;
+    }
+    .creditCardForm #credit_cards {
+        text-align: left;
+    }
+}
+#visa{
+    width: 200px;
+}
+#confirm-purchase{
+    width: 100%;
+}
+
+/* Icon 1 */
+
+.animated-icon1, .animated-icon2, .animated-icon3, .animated-icon4 {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .animated-icon1 span, .animated-icon3 span, .animated-icon4 span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+  }
+  
+  .animated-icon1 span {
+      background: #e65100;
+  }
+  
+  .animated-icon3 span {
+      background: #e3f2fd;
+  }
+  
+  .animated-icon4 span {
+      background: #f3e5f5;
+  }
+  
+  .animated-icon1 span:nth-child(1) {
+    top: 0px;
+  }
+  
+  .animated-icon1 span:nth-child(2) {
+    top: 10px;
+  }
+  
+  .animated-icon1 span:nth-child(3) {
+    top: 20px;
+  }
+  
+  .animated-icon1.open span:nth-child(1) {
+    top: 11px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  
+  .animated-icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+  
+  .animated-icon1.open span:nth-child(3) {
+    top: 11px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+  
+  /* Icon 3*/
+  
+  .animated-icon3 span:nth-child(1) {
+    top: 0px;
+  }
+  
+  .animated-icon3 span:nth-child(2), .animated-icon3 span:nth-child(3) {
+    top: 10px;
+  }
+  
+  .animated-icon3 span:nth-child(4) {
+    top: 20px;
+  }
+  
+  .animated-icon3.open span:nth-child(1) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+  }
+  
+  .animated-icon3.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .animated-icon3.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  
+  .animated-icon3.open span:nth-child(4) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+  }
+  
+  /* Icon 4 */
+  
+  .animated-icon4 span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  
+  .animated-icon4 span:nth-child(2) {
+    top: 10px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  
+  .animated-icon4 span:nth-child(3) {
+    top: 20px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  
+  .animated-icon4.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0px;
+    left: 8px;
+  }
+  
+  .animated-icon4.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  
+  .animated-icon4.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 21px;
+    left: 8px;
+  }
+  #myModal5 .modal-footer{
+      padding-left: 165px;
+  }
+  #myModal5  .button{
+      width: 42%;
+  }
+  .payment-footer{
+      height: auto;
+      overflow: auto;
+      padding: 20px 0px 20px 82px;
+  }
+  .payment-footer button{
+      width: 83%;
+  }
+  .payment-body{
+      height: auto;
+      min-height: 0px;
+  }
+  .sub-btn, .sub-btn2{
+      width: 100%;
+  }
+  .mem{
+      padding-left: 10px;
+  }
+  .mem-all{
+      margin-left: 120px;
+  }
+  .charge-description{
+      margin-left: 15px;
+  }
+  .form-control{
+    width: 86%;
+  }
+  .mar-28{
+    margin-left: 28px;
+  }
+  #div2 .d_img{
+    left: 67px;
+  }
